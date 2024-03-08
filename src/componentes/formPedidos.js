@@ -10,7 +10,10 @@ export const Pedidos =  {
             <h3>Grupo</h3>
             <label for="nombreGrupo" class="label-control">Nombre del grupo:</label>
             <input id="nombreGrupo" type="text" class="form-control mt-2" placeholder="Borrachos de DAW2" minlength="4" maxlength="10">
+
             <label for="numeroMesa" class="label-control">Mesa numero</label>
+            <div class="invalid-feedback">El número de mesa debe estar entre 1 y 15.</div>
+            
             <input id="numeroMesa" type="number" class="form-control mt-2" placeholder ="1" minlength="1" maxlength="15">
             
             <h3 class="mt-5">Haz tu pedido</h3>
@@ -44,7 +47,7 @@ export const Pedidos =  {
       <div class="row">
         <h1 class="text-center mb-5 ">----- Vista camareros -----</h1>
       <h3>Pedidos</h3>
-      <table class="table">
+      <table class="table" id="tablaPedidos">
         <thead>
           <tr>
             <th>Id</th>
@@ -101,5 +104,32 @@ export const Pedidos =  {
             option.value = cerveza.id
 
         })
+        document.querySelector('#tablaPedidos').addEventListener('click', (e) => {
+
+            console.log('Hola desde TablaPedidos')
+
+            if(e.target.id == 'btnEliminar'){
+              console.log('borrar', e.target.id)
+              Eliminar(e)
+            }
+    
+        })
+        function Eliminar(e) {
+
+            const fila = e.target.closest('tr')
+            const comandaId = parseInt(fila.dataset.comandaid)
+
+            // Crear un nuevo array sin la comanda que se desea eliminar
+            const comandasFiltradas = comandasFiltradas.filter(comanda => comanda.id !== comandaId);
+            
+            // Actualizar el array comandas con el nuevo array filtrado
+            comandasFiltradas.length = 0;
+            comandasFiltradas.push(...comandasFiltradas);
+            console.log(comandasFiltradas)
+            // Eliminar la fila de la tabla
+            fila.remove();
+            
+            actualizarTotalPrecio()
+        }
     }
 }

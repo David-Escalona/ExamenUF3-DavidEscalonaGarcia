@@ -3,7 +3,7 @@ export const Tabla =  {
     `
     <div class="row">
         <h3>Pedidos</h3>
-        <table class="table" id="tablaPedidos">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -24,7 +24,7 @@ export const Tabla =  {
                     <td>
                         <div class="d-flex gap-2">
                             <button class="btn btn-outline-warning w-100 btn-sm">Pedido pendiente...</button>
-                            <button class="btn btn-outline-danger w-100 btn-sm"> 🗑 Borrar pedido</button>
+                            <button class="btn btn-outline-danger w-100 btn-sm" id="tablaPedidos"> 🗑 Borrar pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -74,20 +74,6 @@ export const Tabla =  {
         </div>
     </div>`,
     script : ()=>{
-        document.querySelector('#tablaPedidos').addEventListener('click', (e) => {
-
-            console.log('Hola desde TablaPedidos')
-            
-            if(e.target.id == 'btnEdit'){
-              console.log('editar', e.target.id)
-              Editar(e)
-            }
-
-            if(e.target.id == 'btnEliminar'){
-              console.log('borrar', e.target.id)
-              Eliminar(e)
-            }
-    
-        })
+        
     }
 }
