@@ -59,8 +59,6 @@ export const Pedidos =  {
             option.text = cerveza.nombre
             option.value = cerveza.id
             cervezaSelect.appendChild(option)
-
-
         })
     }
 }
