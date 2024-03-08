@@ -12,9 +12,7 @@ export const Pedidos =  {
             <input id="nombreGrupo" type="text" class="form-control mt-2" placeholder="Borrachos de DAW2" minlength="4" maxlength="10">
 
             <label for="numeroMesa" class="label-control">Mesa numero</label>
-            <div class="invalid-feedback">El número de mesa debe estar entre 1 y 15.</div>
-            
-            <input id="numeroMesa" type="number" class="form-control mt-2" placeholder ="1" minlength="1" maxlength="15">
+            <input id="numeroMesa" type="number" class="form-control mt-2" placeholder ="1" minlength="5" maxlength="15">
             
             <h3 class="mt-5">Haz tu pedido</h3>
             <div class="d-flex gap-3 ">
