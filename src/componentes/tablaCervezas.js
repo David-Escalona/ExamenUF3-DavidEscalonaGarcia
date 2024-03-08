@@ -3,7 +3,7 @@ export const Tabla =  {
     `
     <div class="row">
         <h3>Pedidos</h3>
-        <table class="table">
+        <table class="table" id="tablaPedidos">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -74,6 +74,20 @@ export const Tabla =  {
         </div>
     </div>`,
     script : ()=>{
-        
+        document.querySelector('#tablaPedidos').addEventListener('click', (e) => {
+
+            console.log('Hola desde TablaPedidos')
+            
+            if(e.target.id == 'btnEdit'){
+              console.log('editar', e.target.id)
+              Editar(e)
+            }
+
+            if(e.target.id == 'btnEliminar'){
+              console.log('borrar', e.target.id)
+              Eliminar(e)
+            }
+    
+        })
     }
 }
