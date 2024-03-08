@@ -2,7 +2,7 @@ import { cervezas } from "../bd";
 
 
 export const Pedidos =  {
-    template:  //html
+    template: 
     `
         <div  class="row">
             <div id="form" class="col-md-6 mb-5">
