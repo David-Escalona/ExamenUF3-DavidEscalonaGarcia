@@ -2,7 +2,6 @@ export const Tabla =  {
     template:
     `
     <div class="row">
-        <h1 class="text-center mb-5 ">----- Vista camareros -----</h1>
         <h3>Pedidos</h3>
         <table class="table">
             <thead>
@@ -74,8 +73,7 @@ export const Tabla =  {
 
         </div>
     </div>`,
-    
     script : ()=>{
-    
+        
     }
 }
