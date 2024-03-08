@@ -52,14 +52,6 @@ export const Pedidos =  {
     script() {
 
         const cervezaSelect = document.querySelector('#cerveza')
-        const cardNombre = document.querySelector('#cardNombre')
-        const cardDescripcion = document.querySelector('#cardDescripcion')
-        const cardTipo = document.querySelector('#cardTipo')
-        const cardOrigen = document.querySelector('#cardOrigen')
-        const cardPrecio = document.querySelector('#cardPrecio')
-        const cardImagen = document.querySelector('#cardImagen')
-
-        let cervezaSeleccionada = null    
 
         cervezas.forEach(cerveza => {
 
